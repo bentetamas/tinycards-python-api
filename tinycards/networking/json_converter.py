@@ -150,6 +150,7 @@ def json_to_deck(json_data):
         blacklisted_question_types=json_data['blacklistedQuestionTypes'],
         grading_modes=json_data['gradingModes'],
         tts_languages=json_data['ttsLanguages'],
+        averageFreshness = (json_data['averageFreshness'] if 'averageFreshness' in json_data else None),
     )
     deck.image_url = json_data['imageUrl']
     deck.cover_image_url = json_data['coverImageUrl']

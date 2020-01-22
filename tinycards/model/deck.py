@@ -26,7 +26,8 @@ class Deck(object):
                  blacklisted_side_indices=None,
                  blacklisted_question_types=None,
                  grading_modes=None,
-                 tts_languages=None):
+                 tts_languages=None,
+                 averageFreshness=None):
         '''
         Initialize a new instance of the Deck class.
         Args:
@@ -154,6 +155,7 @@ class Deck(object):
         self.blacklisted_question_types = blacklisted_question_types or []
         self.grading_modes = grading_modes or []
         self.tts_languages = tts_languages or []
+        self.averageFreshness = averageFreshness or None
 
     def __str__(self):
         return str(self.__dict__)
